@@ -46,4 +46,10 @@ pip install -e ".[dev]"
 
 The original standalone scripts are still available:
 
+#### Break kerning groups
+`python src/fontra_feamerge/break_groups_in_fea.py path/to/font.ufo`
 
+#### Break mark positioning groups
+`python src/fontra_feamerge/break_groups_in_mark_pos.py path/to/font.ufo`
+#### Merge features
+`python src/fontra_feamerge/combine_features.py MyFont.designspace output.fea`
