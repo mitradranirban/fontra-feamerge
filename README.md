@@ -53,3 +53,23 @@ The original standalone scripts are still available:
 `python src/fontra_feamerge/break_groups_in_mark_pos.py path/to/font.ufo`
 #### Merge features
 `python src/fontra_feamerge/combine_features.py MyFont.designspace output.fea`
+
+## Requirements
+
+- Python 3.10+
+- fontra >= 0.20.0
+- fonttools[ufo] >= 4.50.0
+
+## Development
+
+### Running Tests
+`pytest tests/ -v`
+### Code Formatting
+```
+black src tests
+isort src tests
+```
+### Type Checking
+
+`mypy src`
+
