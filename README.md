@@ -1,5 +1,5 @@
 # Fontra Feamerge Plugin
-[![PyPI version](https://badge.fury.io/py/{package-name}.svg)](https://pypi.org/project/fontra-feamerge/)
+[![PyPI version](https://badge.fury.io/py/fontra-feamerge.svg)](https://pypi.org/project/fontra-feamerge/)
 A comprehensive Fontra plugin for merging multiple Adobe feature files from a designspace into a single variable feature file, with support for breaking kerning and mark positioning groups.
 
 ## Features
