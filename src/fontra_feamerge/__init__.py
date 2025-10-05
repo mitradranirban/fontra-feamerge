@@ -6,7 +6,7 @@ into a single variable feature file, with support for breaking kerning and
 mark positioning groups.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.1"
 __author__ = "Anirban Mitra"
 
 from .backend import FeamergeBackend
