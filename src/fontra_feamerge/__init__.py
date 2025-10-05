@@ -13,4 +13,3 @@ from .backend import FeamergeBackend
 from .plugin import registerFontraPlugin
 
 __all__ = ["FeamergeBackend", "registerFontraPlugin", "__version__"]
-

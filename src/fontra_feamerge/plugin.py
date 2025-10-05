@@ -8,7 +8,7 @@ from .backend import FeamergeBackend
 def registerFontraPlugin():
     """
     Entry point for Fontra plugin registration.
-    
+
     Returns a dictionary with plugin metadata and configuration.
     """
     return {
@@ -19,7 +19,6 @@ def registerFontraPlugin():
         "backend": FeamergeBackend,
         "fileTypes": [".designspace"],
         "actions": [
-            
             {
                 "id": "break-kerning-groups",
                 "label": "Break Kerning Groups",
@@ -70,4 +69,3 @@ def registerFontraPlugin():
             },
         },
     }
-
