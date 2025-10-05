@@ -27,7 +27,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "fontra>=0.20.0",
+    "fontra>=0.1.0",
     "fonttools[ufo]>=4.50.0",
 ]
 
