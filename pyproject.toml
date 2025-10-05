@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fontra-feamerge"
+version = "0.2.0"
+description = "Fontra plugin to merge multiple Adobe feature files into variable feature files"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+    {name = "Nirban Mitra", email = "mitradranirban@gmail.com"}
+]
+keywords = ["fonts", "typography", "fontra", "variable-fonts", "opentype", "features"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Fonts",
+    "Topic :: Multimedia :: Graphics :: Editors",
+]
+
+dependencies = [
+    "fontra>=0.20.0",
+    "fonttools[ufo]>=4.50.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "isort>=5.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/mitradranirban/feamerge"
+Repository = "https://github.com/mitradranirban/feamerge"
+Issues = "https://github.com/mitradranirban/feamerge/issues"
+
+[project.entry-points."fontra.plugins"]
+feamerge = "fontra_feamerge:registerFontraPlugin"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+

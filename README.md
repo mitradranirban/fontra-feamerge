@@ -33,14 +33,18 @@ pip install -e ".[dev]"
 
 ### Within Fontra
 
-1. Open a `.designspace` file in Fontra
-2. Access the **Plugin Manager** from the menu
-3. Select **Feature File Merger** plugin
-4. Choose from available actions:
-   - **Merge Variable Features**: Combine all features
-   - **Break Kerning Groups**: Expand kerning groups
-   - **Break Mark Positioning Groups**: Expand mark positioning
-   - **Process All**: Run all operations in sequence
+* Open a `.designspace` file in Fontra
+* Access the **Plugin Manager** from the menu
+* Select **Feature File Merger** plugin
+* Choose from available actions:
+
+    - **Break Kerning Groups**: Expand kerning groups
+
+     - **Break Mark Positioning Groups**: Expand mark positioning3
+
+    - **Merge Variable Features**: Combine all features
+
+     - **Process All**: Run all operations in sequence
 
 ### Command Line (Standalone Scripts)
 
@@ -73,3 +77,41 @@ isort src tests
 
 `mypy src`
 
+## How It Works
+
+### Designspace Integration
+
+The plugin uses `fontTools.designspaceLib` to read designspace files and extract all UFO source references, handling both absolute and relative paths.
+
+### UFO Feature Reading
+
+Using `fontTools.ufoLib2`, the plugin opens each UFO and reads the `features.fea` content, providing access to complete feature definitions from each master.
+
+### Variable Font Syntax Generation
+
+The plugin generates variable font positioning syntax with:
+- Combined glyph classes from all masters
+- Positioning rules with coordinate:value pairs
+- Support for both regular and enum positioning statements
+
+Example output:
+`pos A A (wdth=100,wght=400:10 wdth=100,wght=900:20)`
+
+## License
+
+GPL-3.0-or-later
+
+## Author
+
+Anirban Mitra 
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## References
+
+- [FontTools UFOLib Documentation](https://fonttools.readthedocs.io/en/latest/ufoLib/)
+- [Designspace Specification](https://fonttools.readthedocs.io/en/latest/designspaceLib/)
+- [FontTools FeaLib Documentation](https://fonttools.readthedocs.io/en/latest/feaLib/)
+- [Fontra Documentation](https://docs.fontra.xyz/)
